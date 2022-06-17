@@ -12,10 +12,6 @@ module.exports = createNewSubscription = async (req, res) => {
   try {
     if (!data.full_name || data.full_name === '') return res.status(400).send(errorObject('full_name is required', 'Registration Error', 'Full name is required!'));
 
-    if (!data.contact_number || data.contact_number === '') return res.status(400).send(errorObject('contact_number is required', 'Registration Error', 'Contact number is required!'));
-
-    if (!data.date_of_birth || data.date_of_birth === '') return res.status(400).send(errorObject('date_of_birth is required', 'Registration Error', 'date of birth is required!'));
-
     if (!data.email || data.email === '') return res.status(400).send(errorObject('email is required', 'Registration Error', 'Email is required!'));
 
     if (!data.password || data.password === '') return res.status(400).send(errorObject('password is required', 'Registration Error', 'Password is required!'));
